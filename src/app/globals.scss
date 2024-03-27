@@ -1,0 +1,20 @@
+@use 'scss-reset/reset';
+
+:root{
+--index: calc(1vw + 1vh);
+  --transition: 1.5s cubic-bezier(.05, .5, 0, 1);
+}
+*{
+  font-size: inherit;
+}
+
+body{
+  background-color: #000000;
+  color: white;
+  font-size: 16px;
+
+}
+
+a{
+  color: currentColor;
+}

@@ -1,0 +1,35 @@
+.wrapper{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 10;
+  pointer-events: none;
+}
+.container1, .container2, .container3, .container4{
+  position: absolute;
+  width: 25vw;
+  height: 100vh;
+  top: 0;
+
+  z-index: -1;
+}
+
+.container1{
+  left: 0;
+  background-color: #232323;
+}
+.container2{
+  left: 25vw;
+  background-color: #232323;
+}
+.container3{
+  left: 50vw;
+  background-color: #232323;
+}
+.container4{
+  left: 75vw;
+  background-color: #232323;
+}
