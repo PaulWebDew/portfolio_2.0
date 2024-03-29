@@ -53,8 +53,8 @@ export const AnimationLink: FC<Props> = ({
               initial={{ y: "100vh" }}
               animate={start && { y: 0 }}
               onAnimationComplete={() => {
-                setTimeout(() => router.push(href), 100);
-                setTimeout(() => setStart(false), 200);
+                setTimeout(() => router.push(href), 200);
+                setTimeout(() => setStart(false), 300);
               }}
               transition={{ ease: "easeInOut", duration: 0.6, delay: 0.8 }}
             ></motion.div>

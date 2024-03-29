@@ -13,7 +13,7 @@ export const NavBar: FC = () => {
       <LogoIcon width={50} height={50} className={cls.logo} />
       <ul>
         <li>
-          <AnimationLink href={"/home"} data-selected={isActive == "home"}>
+          <AnimationLink href={"/"} data-selected={isActive == null}>
             <HomeIcon width={30} height={30} />
             <span>Home</span>
           </AnimationLink>
