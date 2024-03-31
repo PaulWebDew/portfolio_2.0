@@ -1,24 +1,20 @@
-import React from "react";
+import React from 'react';
 
-import cls from "./style.module.scss";
-import clsx from "clsx";
-import Image from "next/image";
-import bgImage from "@/assets/images/main_bg.png";
-import photo from "@/assets/images/myPhoto.png";
-import html from "@/assets/images/html.png";
-import css from "@/assets/images/css.png";
-import sass from "@/assets/images/sass.png";
-import js from "@/assets/images/js.png";
-import react from "@/assets/images/react.png";
-import reactNative from "@/assets/images/reactNatiive.png";
-import nodejs from "@/assets/images/nodeJS.png";
-import mongo from "@/assets/images/mongo.png";
-import nginx from "@/assets/images/nginx.png";
-import docker from "@/assets/images/docker.png";
-import redux from "@/assets/images/redux.png";
-import next from "@/assets/images/next.png";
-import { useIntersection } from "next/dist/client/use-intersection";
-import { Button } from "@/components";
+import cls from './style.module.scss';
+import Image from 'next/image';
+import photo from '@/assets/images/myPhoto.png';
+import { Button } from '@/components';
+import {
+  DownloadIcon,
+  EmailIcon,
+  GitHubIcon,
+  TelegramIcon,
+  WhatsappIcon,
+} from '@/assets/icons';
+
+import ReactCertificate from '@/assets/images/ReactCertificate.jpg';
+import JSCertificate from '@/assets/images/certificateJS.png';
+import HTMLCertificate from '@/assets/images/certificateHTML.png';
 
 export default function About() {
   return (
@@ -27,210 +23,123 @@ export default function About() {
         <h2>ABOUT ME</h2>
         <div className={cls.textWrapper}>
           <p>
-            <span>Hello, I´m Pavel,</span> web-developer based on Minsk. <br />{" "}
-            I have rich experience in web developing & building and
-            customization E-commerce platforms,UI Kit and mobile Apps. Also I am
-            good at{" "}
+            <span>Hello, I´m Pavel,</span> web-developer based on Minsk <br /> I
+            have rich experience in web developing & building and customization
+            E-commerce platforms,UI Kit and mobile Apps. Also I am good at{' '}
             <span>
-              React, React-Native, Next, NodeJS, Express, MongoDB, Docker,
-              Nginx.
+              React, React-Native, Next, NodeJS, Express, MongoDB, Docker, Nginx
             </span>
           </p>
         </div>
         <div className={cls.buttons}>
-          <Button>Download CV</Button>
+          <Button>
+            <DownloadIcon width={20} height={25} />
+            Download CV
+          </Button>
+          <Button width={'0.5rem'} padding={'1.1rem'}>
+            <EmailIcon width={20} height={27} />
+          </Button>
+          <Button width={'0.5rem'} padding={'1.1rem'}>
+            <GitHubIcon width={20} height={27} />
+          </Button>
+          <Button width={'0.5rem'} padding={'1.1rem'}>
+            <WhatsappIcon width={20} height={27} />
+          </Button>
+          <Button width={'0.5rem'} padding={'1.1rem'}>
+            <TelegramIcon width={20} height={27} />
+          </Button>
+        </div>
+        <div className={cls.historyWrapper}>
+          <h3>History of formation</h3>
+          <div className={cls.historyContainer}>
+            <div className={cls.historyItem}>
+              <span>01/07/2023</span>
+              <p>
+                <span>Frontend Developer</span>
+                <span>ReLabs</span>
+                Web developing E-commerce services, websites and UI-Kit.
+              </p>
+            </div>
+            <div className={cls.historyItem}>
+              <span>10/01/2022</span>
+              <p>
+                <span>FullStack Developer</span>
+                <span>FreeLance</span>
+                Web developing E-commerce services, websites and UI-Kit.
+                Improving scripts and updating existing platforms. Creating
+                servers and api, hosting, deploying projects
+              </p>
+            </div>
+            <div className={cls.historyItem}>
+              <span>26/09/2022</span>
+              <p>
+                <span>Finished 'React JS' course at "IT GIT" </span>
+              </p>
+            </div>
+            <Image
+              src={ReactCertificate}
+              alt={'Certificate'}
+              placeholder={'blur'}
+              loading={'lazy'}
+            />
+            <div className={cls.historyItem}>
+              <span>13/02/2022</span>
+              <p>
+                <span>Finished 'Java Script 2.0' course at "IT GIT" </span>
+              </p>
+            </div>
+            <Image
+              src={JSCertificate}
+              alt={'Certificate'}
+              placeholder={'blur'}
+              loading={'lazy'}
+            />
+            <div className={cls.historyItem}>
+              <span>04/01/2022</span>
+              <p>
+                <span>
+                  Finished 'HTML FOR JS Developers' course at "IT GIT"{' '}
+                </span>
+              </p>
+            </div>
+            <Image
+              src={HTMLCertificate}
+              alt={'Certificate'}
+              placeholder={'blur'}
+              loading={'lazy'}
+            />
+
+            <div className={cls.historyItem}>
+              <span>22/07/2007 - 19/01/2009</span>
+              <p>
+                <span>Military serving</span>
+              </p>
+            </div>
+            <div className={cls.historyItem}>
+              <span>01/09/2003 - 25/05/2007</span>
+              <p>
+                <span>student of agrarian ang technical college</span>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
       <div className={cls.mainPhoto}>
         <Image
           src={photo}
-          alt="Photo"
-          sizes="100%"
+          alt='Photo'
+          sizes='100%'
           style={{
-            height: "auto",
-            width: "100%",
-            objectFit: "contain",
-            filter: " brightness(100%) ",
-            maxHeight: "90vh",
+            height: 'auto',
+            width: '100%',
+            objectFit: 'contain',
+            filter: 'brightness(100%)',
+            maxHeight: '90vh',
           }}
-          placeholder="blur"
+          placeholder='blur'
           className={cls.photo}
         />
       </div>
     </section>
-    // <div className={clsx(cls.wrapper, cls.wrapperActive, cls.index)}>
-    //   <Image
-    //     alt="Desc"
-    //     src={bgImage}
-    //     quality={100}
-    //     fill
-    //     sizes="100%"
-    //     style={{
-    //       objectFit: "cover",
-    //       filter: "grayscale(100%) brightness(40%)",
-    //     }}
-    //     placeholder="blur"
-    //   />
-    //   <div className={cls.header}>
-    //     <div className={cls.photoWrapper}>
-    //       <Image
-    //         src={photo}
-    //         alt="Photo"
-    //         sizes="100%"
-    //         style={{
-    //           height: "100%",
-    //           width: "auto",
-    //           objectFit: "fill",
-    //           filter: " brightness(100%) ",
-    //         }}
-    //         placeholder="blur"
-    //         className={cls.photo}
-    //       />
-    //     </div>
-    //     <div className={cls.title}>
-    //       <h1>
-    //         Hi, <br /> I`m Pavel, a
-    //         <br /> Web Developer
-    //       </h1>
-    //       <div className={cls.achievements}>
-    //         <ul>
-    //           <li>Born in 1988, in Volkovysk, Belarus</li>
-    //           <li>
-    //             Experienced in web development from 2020, write clean, elegant
-    //             and efficient code
-    //           </li>
-    //           <li>I believe web developer can be more diverse and inspiring</li>
-    //           <li>
-    //             I`m pursuing new expressions through learning, experiments and
-    //             thoughts
-    //           </li>
-    //           <li>
-    //             I`ve developed many types of front-ends from well know DJ
-    //             applications to Ecommerce booking platforms
-    //           </li>
-    //           <li>
-    //             I`m passionate about cutting-edge, pixel-perfect, beautiful
-    //             interfaces and intuitively implemented UX
-    //           </li>
-    //         </ul>
-    //       </div>
-    //     </div>
-    //   </div>
-    //   <div className={cls.skills}>
-    //     <Image
-    //       src={html}
-    //       alt="HTML icon"
-    //       style={{
-    //         objectFit: "fill",
-    //         filter: " grayscale(40%) ",
-    //       }}
-    //       placeholder="blur"
-    //     />
-    //     <Image
-    //       src={css}
-    //       alt="css icon"
-    //       style={{
-    //         objectFit: "fill",
-    //         filter: " grayscale(40%) ",
-    //       }}
-    //       placeholder="blur"
-    //     />
-    //     <Image
-    //       src={js}
-    //       alt="js icon"
-    //       style={{
-    //         scale: 1.2,
-    //         objectFit: "fill",
-    //         filter: " grayscale(40%) ",
-    //       }}
-    //       placeholder="blur"
-    //     />
-    //     <Image
-    //       src={sass}
-    //       alt="SASS icon"
-    //       style={{
-    //         scale: 0.8,
-    //         margin: " 0 -3vw",
-    //         objectFit: "fill",
-    //         filter: " grayscale(40%) ",
-    //       }}
-    //       placeholder="blur"
-    //     />
-    //     <Image
-    //       src={react}
-    //       alt="React icon"
-    //       style={{
-    //         objectFit: "fill",
-    //         filter: " grayscale(40%) ",
-    //       }}
-    //       placeholder="blur"
-    //     />
-    //     <Image
-    //       src={reactNative}
-    //       alt="ReactNative icon"
-    //       style={{
-    //         scale: 1.5,
-    //         position: "relative",
-    //         bottom: "-2vh",
-    //         filter: " grayscale(40%) ",
-    //       }}
-    //       placeholder="blur"
-    //     />
-    //     <Image
-    //       src={redux}
-    //       alt="Redux icon"
-    //       style={{
-    //         objectFit: "fill",
-    //         filter: " grayscale(40%) ",
-    //       }}
-    //       placeholder="blur"
-    //     />
-    //     <Image
-    //       src={next}
-    //       alt="Next icon"
-    //       style={{
-    //         objectFit: "fill",
-    //         filter: " grayscale(40%) ",
-    //       }}
-    //       placeholder="blur"
-    //     />
-    //     <Image
-    //       src={nodejs}
-    //       alt="NodeJS icon"
-    //       style={{
-    //         objectFit: "fill",
-    //         filter: " grayscale(40%) ",
-    //       }}
-    //       placeholder="blur"
-    //     />
-    //     <Image
-    //       src={mongo}
-    //       alt="MongoDB icon"
-    //       style={{
-    //         objectFit: "fill",
-    //         filter: " grayscale(40%) ",
-    //       }}
-    //       placeholder="blur"
-    //     />
-    //     <Image
-    //       src={nginx}
-    //       alt="NGINX icon"
-    //       style={{
-    //         objectFit: "fill",
-    //         filter: " grayscale(40%) ",
-    //       }}
-    //       placeholder="blur"
-    //     />
-    //     <Image
-    //       src={docker}
-    //       alt="Docker icon"
-    //       style={{
-    //         objectFit: "fill",
-    //         filter: " grayscale(40%) ",
-    //       }}
-    //       placeholder="blur"
-    //     />
-    //   </div>
-    // </div>
   );
 }

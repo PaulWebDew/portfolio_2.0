@@ -1,0 +1,106 @@
+.button {
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 1rem;
+  padding: 1rem 1.5rem;
+  box-shadow: 2px 2px 10px -1px rgba(255, 255, 255, 0.5);
+  font-size: 1rem;
+  width: 10rem;
+  height: 2rem;
+  overflow: hidden;
+  
+  &:active {
+    filter: brightness(85%);
+  }
+
+  &:hover {
+    box-shadow: 2px 2px 10px -1px rgba(255, 255, 255, 0.6);
+  }
+
+
+  & > div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -23%);
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 11rem;
+    transition: top ease-in-out 0.5s;
+
+
+    .item {
+      white-space: nowrap;
+      align-items: center;
+      justify-content: center;
+      padding: 0.5rem;
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: nowrap;
+    }
+
+    .item:first-child {
+      background-color: rgb(49, 53, 56);
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      color: var(--color-text-primary);
+      transition: all ease-in-out 0.5s;
+    }
+
+    .item:last-child {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      transition: all ease-in-out 0.5s;
+      background-color: white;
+      color: rgb(49, 53, 56);
+    }
+
+    .start {
+      animation: radiusBottom 0.5s forwards;
+    }
+
+
+    &:hover {
+      top: -1.8rem;
+      background-color: rgb(49, 53, 56);
+      transition: top ease-in-out 0.5s;
+
+
+      .item:last-child {
+        animation: radiusTop 0.5s forwards;
+        color: rgb(49, 53, 56);
+      }
+    }
+  }
+}
+
+@keyframes radiusBottom {
+  0% {
+    border-bottom-left-radius: 0rem;
+    border-bottom-right-radius: 0rem;
+  }
+  30% {
+    border-bottom-left-radius: 5rem;
+    border-bottom-right-radius: 5rem;
+  }
+  100% {
+    border-bottom-left-radius: 0rem;
+    border-bottom-right-radius: 0rem;
+  }
+}
+
+@keyframes radiusTop {
+  0% {
+    border-top-left-radius: 0rem;
+    border-top-right-radius: 0rem;
+  }
+  30% {
+    border-top-left-radius: 5rem;
+    border-top-right-radius: 5rem;
+  }
+  100% {
+    border-top-left-radius: 0rem;
+    border-top-right-radius: 0rem;
+  }
+}
