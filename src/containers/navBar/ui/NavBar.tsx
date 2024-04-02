@@ -1,11 +1,11 @@
-"use client";
-import React, { FC } from "react";
-import cls from "./style.module.scss";
-import { HomeIcon, UserIcon } from "@/assets/icons";
-import { LogoIcon } from "@/assets/icons/LogoIcon";
-import Link from "next/link";
-import { useSelectedLayoutSegment } from "next/navigation";
-import { AnimationLink } from "@/components/animationLink";
+'use client';
+import React, { FC } from 'react';
+import cls from './style.module.scss';
+import { HomeIcon, PortfolioIcon, UserIcon } from '@/assets/icons';
+import { LogoIcon } from '@/assets/icons/LogoIcon';
+import { useSelectedLayoutSegment } from 'next/navigation';
+import { AnimationLink } from '@/components/animationLink';
+
 export const NavBar: FC = () => {
   const isActive = useSelectedLayoutSegment();
   return (
@@ -13,15 +13,24 @@ export const NavBar: FC = () => {
       <LogoIcon width={50} height={50} className={cls.logo} />
       <ul>
         <li>
-          <AnimationLink href={"/"} data-selected={isActive == null}>
+          <AnimationLink href={'/'} data-selected={isActive == null}>
             <HomeIcon width={30} height={30} />
             <span>Home</span>
           </AnimationLink>
         </li>
         <li>
-          <AnimationLink href={"/about"} data-selected={isActive == "about"}>
+          <AnimationLink href={'/about'} data-selected={isActive == 'about'}>
             <UserIcon width={30} height={30} />
             <span>About</span>
+          </AnimationLink>
+        </li>
+        <li>
+          <AnimationLink
+            href={'/portfolio'}
+            data-selected={isActive == 'portfolio'}
+          >
+            <PortfolioIcon width={30} height={30} />
+            <span>Portfolio</span>
           </AnimationLink>
         </li>
       </ul>

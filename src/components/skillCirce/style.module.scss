@@ -1,0 +1,65 @@
+.progress {
+  scale: 0.8;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  color: white;
+  background: #444 linear-gradient(to right, transparent 50%, var(--clr) 0);
+
+  p {
+    position: absolute;
+    top: 93%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    gap: 0.1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(255, 255, 255, 0.9);
+    text-shadow: black 2px 2px;
+
+    span {
+      font-size: 1.2rem;
+      color: inherit;
+    }
+  }
+
+  .image {
+    width: auto !important;
+    height: 85% !important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+}
+
+.progress::before {
+  content: '';
+  display: block;
+  height: 100%;
+  margin-left: 50%;
+  transform-origin: left;
+  border-radius: 0 100% 100% 0/50%;
+  background: var(--clr);
+  transform: rotate(calc((var(--i) - 50) * 0.01turn));
+}
+
+.progress::after {
+  content: '';
+  position: absolute;
+  inset: 15px;
+  border-radius: 50%;
+  background: #9d9797;
+
+}
+
+.progress.less::before {
+  background: #444444;
+  transform: rotate(calc((var(--i) - 0) * 0.01turn));
+}

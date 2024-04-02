@@ -3,7 +3,7 @@ import React from 'react';
 import cls from './style.module.scss';
 import Image from 'next/image';
 import photo from '@/assets/images/myPhoto.png';
-import { Button } from '@/components';
+import { Button, Skills } from '@/components';
 import {
   DownloadIcon,
   EmailIcon,
@@ -57,7 +57,7 @@ export default function About() {
               <p>
                 <span>Frontend Developer</span>
                 <span>ReLabs</span>
-                Web developing E-commerce services, websites and UI-Kit.
+                Web developing E-commerce services, websites and UI-Kit
               </p>
             </div>
             <div className={cls.historyItem}>
@@ -65,15 +65,17 @@ export default function About() {
               <p>
                 <span>FullStack Developer</span>
                 <span>FreeLance</span>
-                Web developing E-commerce services, websites and UI-Kit.
-                Improving scripts and updating existing platforms. Creating
-                servers and api, hosting, deploying projects
+                Web developing E-commerce services, websites. Improving scripts
+                and updating existing platforms. Creating servers and api,
+                hosting, deploying projects
               </p>
             </div>
             <div className={cls.historyItem}>
               <span>26/09/2022</span>
               <p>
-                <span>Finished 'React JS' course at "IT GIT" </span>
+                <span>
+                  &ldquo;Finished &ldquo;React JS&ldquo; course at &ldquo;IT GIT
+                </span>
               </p>
             </div>
             <Image
@@ -85,7 +87,10 @@ export default function About() {
             <div className={cls.historyItem}>
               <span>13/02/2022</span>
               <p>
-                <span>Finished 'Java Script 2.0' course at "IT GIT" </span>
+                <span>
+                  &ldquo;Finished &ldquo;Java Script 2.0&ldquo; course at
+                  &ldquo;IT GIT{' '}
+                </span>
               </p>
             </div>
             <Image
@@ -98,7 +103,8 @@ export default function About() {
               <span>04/01/2022</span>
               <p>
                 <span>
-                  Finished 'HTML FOR JS Developers' course at "IT GIT"{' '}
+                  Finished &quot;HTML FOR JS Developers&quot; course at &quot;IT
+                  GIT&quot;{' '}
                 </span>
               </p>
             </div>
@@ -121,6 +127,20 @@ export default function About() {
                 <span>student of agrarian ang technical college</span>
               </p>
             </div>
+          </div>
+          <div className={cls.introduce}>
+            <p>
+              Skilled and dedicated web-developer with 2+ years of experience
+              focused on frontend development in applications and web portals,
+              JS focused on React.Knowledge in the complete cycle of a frontend
+              web development as well as its optimization for integration with
+              third parties, SEO, lazy load, SSR. Great team player, passion for
+              sharing my knowledge, responsibility, and commitment as primary
+              values, always looking for learning, proactive.
+            </p>
+          </div>
+          <div className={cls.skills}>
+            <Skills />
           </div>
         </div>
       </div>

@@ -6,3 +6,4 @@ export { WhatsappIcon } from '@/assets/icons/WhatsappIcon';
 export { TelegramIcon } from '@/assets/icons/TelegramIcon';
 export { GitHubIcon } from '@/assets/icons/GitHubIcon';
 export { EmailIcon } from '@/assets/icons/EmailIcon';
+export { PortfolioIcon } from '@/assets/icons/PortfolioIcon';
